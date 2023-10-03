@@ -4,7 +4,6 @@ import { useState } from "react";
 import IconUser from "./images/user_icon.png";
 import Image from 'next/image'
 import "./styles/login.css"
-
 function Login(props, params){
  const [isPass, setIsPass] = useState(false);
  const [loginData, setLoginData] = useState({username:'', password:''});

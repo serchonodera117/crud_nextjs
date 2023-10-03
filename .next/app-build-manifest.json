@@ -1,28 +1,43 @@
 {
   "pages": {
     "/_not-found": [
-      "static/chunks/webpack-8dbbaec03bbc1684.js",
+      "static/chunks/webpack-0222f84b48b1a231.js",
       "static/chunks/fd9d1056-821abe26e24d5876.js",
       "static/chunks/864-ea4aeb497782dd61.js",
       "static/chunks/main-app-f1b119c7d08dc2c6.js",
       "static/chunks/app/_not-found-2266fe69680d18ef.js"
     ],
     "/layout": [
-      "static/chunks/webpack-8dbbaec03bbc1684.js",
+      "static/chunks/webpack-0222f84b48b1a231.js",
       "static/chunks/fd9d1056-821abe26e24d5876.js",
       "static/chunks/864-ea4aeb497782dd61.js",
       "static/chunks/main-app-f1b119c7d08dc2c6.js",
-      "static/css/3585f437b5dd71d5.css",
-      "static/chunks/app/layout-61a3f6f45238bed8.js"
+      "static/chunks/20-3a74a449309d151a.js",
+      "static/css/d5f203b730ae796b.css",
+      "static/chunks/app/layout-750d638a58a815aa.js"
     ],
     "/page": [
-      "static/chunks/webpack-8dbbaec03bbc1684.js",
+      "static/chunks/webpack-0222f84b48b1a231.js",
       "static/chunks/fd9d1056-821abe26e24d5876.js",
       "static/chunks/864-ea4aeb497782dd61.js",
       "static/chunks/main-app-f1b119c7d08dc2c6.js",
-      "static/chunks/986-56e53441ad5c7ba1.js",
-      "static/css/6bac7b8f9f979322.css",
-      "static/chunks/app/page-1ca882ddec722fc8.js"
+      "static/chunks/20-3a74a449309d151a.js",
+      "static/css/de2e3424335191de.css",
+      "static/chunks/app/page-b051f1bae9eb5546.js"
+    ],
+    "/productos/page": [
+      "static/chunks/webpack-0222f84b48b1a231.js",
+      "static/chunks/fd9d1056-821abe26e24d5876.js",
+      "static/chunks/864-ea4aeb497782dd61.js",
+      "static/chunks/main-app-f1b119c7d08dc2c6.js",
+      "static/chunks/app/productos/page-3af3578c840a08a2.js"
+    ],
+    "/usuarios/page": [
+      "static/chunks/webpack-0222f84b48b1a231.js",
+      "static/chunks/fd9d1056-821abe26e24d5876.js",
+      "static/chunks/864-ea4aeb497782dd61.js",
+      "static/chunks/main-app-f1b119c7d08dc2c6.js",
+      "static/chunks/app/usuarios/page-6de506fb3d2f4d4d.js"
     ]
   }
 }
