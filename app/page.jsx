@@ -16,14 +16,14 @@ export default function RootLayout() {
   const [toastTitle, setToastTitle] = useState("")
     useEffect(()=>{
       let token = localStorage.getItem('token_session')
-      let temp = (token)? true:false
-      setIsLogged(token)
+      setIsLogged(!!token)
     },[])
   function startSession() {
     setIsLogged(true)
   }
   function closeSession() {
     setIsLogged(false)
+    localStorage.removeItem('token_session')
   }
   function writeToast(title, message){
     let checkbox = document.getElementById('btn-close-toast')
@@ -54,7 +54,7 @@ export default function RootLayout() {
 
       {
        (!islogged)? <Login onLogin={startSession} onToast={writeToast}/> :
-        <Navigation></Navigation>
+        <Navigation onLogout={closeSession}></Navigation>
       }
     </main>
   )
