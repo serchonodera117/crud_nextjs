@@ -1,0 +1,41 @@
+:root{
+    --bg-body: rgba(45, 6, 54, 0.6);
+    --bg-header: rgba(21, 2, 26, 0.5);
+}
+
+.toast{
+    position: absolute;
+    bottom: 4rem;
+    z-index: 5;
+    width: 16rem;
+    height: 9rem;
+    opacity: 0;
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+    background-color: var(--bg-body);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.toast-header{
+    padding: 10px 20px;
+    display: flex;
+    width: 100%;
+    background-color: var(--bg-header);
+}
+.content-name{
+    display: table;
+}
+
+.toast-body{
+    padding: 10px 20px;
+}
+.close-btn{
+    margin-left: auto;
+}
+.toast:has(input[type="checkbox"]:checked){
+    transform: translateX(40px);
+    backdrop-filter: blur(10px);
+    opacity: 1;
+    z-index: 10;
+    box-shadow: 0px 0px 5px 3px rgba(95, 82, 105, 0.8);
+}

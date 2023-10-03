@@ -8,35 +8,43 @@ import "./styles/login.css"
 function Login(props, params){
  const [isPass, setIsPass] = useState(false);
  const [loginData, setLoginData] = useState({username:'', password:''});
- 
-    function startMySession(e){
+ const [passType, setPassType] = useState("password")
+   async function startMySession(e){
         e.preventDefault();
         let url = 'https://fakestoreapi.com/auth/login'
+        
         let data={
             username: loginData.username,
             password: loginData.password
         }
-        fetch(url,{
-            method:'POST',
-            headers: {'Content-Type' : 'application/json'},
-            body:JSON.stringify(data)
-        })
-        .then(response => response.json)
-        .then(resp=>{
-            console.log(resp)
-        })
-
-        //props.onLogin()
+   
+        try{
+            const response = await fetch(url,{
+                method:'POST',
+                headers: {'Content-Type' : 'application/json'},
+                body:JSON.stringify(data)
+            })         
+            
+            const dataResponse = await response.json();
+            
+            if(dataResponse.hasOwnProperty('token')){
+                props.onLogin()
+                localStorage.setItem("token_session", dataResponse.token)
+            }
+        }catch(error){
+            props.onToast("Error", error.toString())
+        }
     }
 
     function changePassVisibility(obj){
-        let pass = document.getElementById(obj.password)
         let btn = document.getElementById(obj.btnpass)
 
         let temp = !isPass
         setIsPass(temp)
 
-        pass.type = (temp)? 'text' : 'password'
+        
+        let pass = (temp)? "text" : "password"
+        setPassType(pass)
         btn.innerHTML= temp ? 'Show' : 'Hide' 
     }
 
@@ -55,7 +63,8 @@ function Login(props, params){
                 <Image src={IconUser} className="icon-user" ></Image>
                 <br/>
                 <h1>Login</h1>
-                
+    
+    {/* login form */}
                 <div className="content">
                     <form onSubmit={startMySession}>
                         <div className="section">
@@ -68,7 +77,7 @@ function Login(props, params){
                         <div className="section">
                             <label htmlFor="password">pasword</label>
                                 <br></br>
-                            <input id="input-password" type="password" placeholder="*******" required
+                            <input id="input-password" type={passType} placeholder="*******" required
                                  onChange={changePass} value={loginData.password}/>
                            
                             <div className="container-pass-visibility">
