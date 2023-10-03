@@ -12,7 +12,7 @@ export default function MainPage() {
     setIsLogged(true)
   }
   return (
-    <main className={styles.main}>
+    <main>
       {
         (!islogged)?<Login onLogin={startSession}/>:<Home/>
       }
