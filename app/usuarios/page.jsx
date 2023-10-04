@@ -160,7 +160,7 @@ function Users(){
                     }
                 </div>
                 :
-                <div></div>
+                <img className="page-not-found" src="https://www.hostpapa.com/blog/app/uploads/2019/05/image4-1.png"></img>
             }{
                 (isLogged)?
                 <div className="menu-options">

@@ -1,5 +1,8 @@
 {
-  "/usuarios/page": "app/usuarios/page.js",
+  "/_not-found": "app/_not-found.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/page": "app/page.js",
   "/productos/page": "app/productos/page.js",
+  "/usuarios/page": "app/usuarios/page.js",
   "/usuarios/[id]/page": "app/usuarios/[id]/page.js"
 }
