@@ -110,6 +110,10 @@ function Users(){
             let temp = [...users]
                 temp.push(data)
           |     setUsers(temp)
+          setTimeout(()=>{
+            loadModal()
+            data.email=""
+          },500)
          }
          catch(err){
                  console.log(err)

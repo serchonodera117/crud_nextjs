@@ -2,6 +2,8 @@
 import React from "react";
 import Navigation from "@/components/navigation";
 import { useState, useEffect } from "react";
+import "@/components/styles/users.css"
+
 function Productos(){
     const [isLogged,setIsLogged] = useState(true);
     const [users, setUsers] = useState("");
