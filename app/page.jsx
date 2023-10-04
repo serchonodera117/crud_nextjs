@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from './page.module.css'
 import { useState, useEffect } from 'react'
 import  '../components/styles/toast.css'
-
+import '../components/styles/users.css'
 
 import Login from '../components/login'
 import Navigation from '@/components/navigation'
@@ -32,7 +32,7 @@ export default function RootLayout() {
     setToastTitle(title)
   }
   return (
-    <main>
+    <main className="page">
         <div className="toast">
           <div className="toast-header">
               <div className="content-name">
@@ -57,7 +57,19 @@ export default function RootLayout() {
         <Navigation onLogout={closeSession}></Navigation>
       }
       {
-        (islogged)?<img className="page-not-found" src="https://1.bp.blogspot.com/-CbWLumSsnHA/X3NCN8Y97SI/AAAAAAAAbdM/6_nItNbt0jcQvkFzogyKeqUGJjMyM57rACLcBGAsYHQ/w1600/v3-290920-rocket-minimalist-desktop-wallpaper-hd.png"></img>:<div></div>
+        (islogged)?
+        <div className="page">
+          <div id="home-title">
+            <h1 >Home</h1>
+          </div>
+          <img 
+          className="page-not-found"
+          src="https://i.pinimg.com/736x/d6/48/b3/d648b38b1907508b37588225ad42fa35.jpg"
+          >
+          </img>
+        </div>
+         :
+         <div></div>
       }
     </main>
   )

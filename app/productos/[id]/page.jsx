@@ -36,8 +36,21 @@ function SingleProduct({params}){
             {
                 (singleProduct)?
                     <div className="card-user-details">
-                        <div className="col-left"></div>
-                        <div className="col-right"></div>
+                        <div className="col-left">
+                            <img src={singleProduct.image} className="image-user"></img>
+                            <h4>{singleProduct.title}</h4>
+                            <br></br>
+                            <h4>Price: {singleProduct.price}$</h4>
+                            <br></br>
+                            <h4>ID: {singleProduct.id}</h4>
+                            <br></br>
+                        </div>
+                        <div className="col-right">
+                            <br></br>
+                            <h4>{singleProduct.category}</h4>
+                            <br></br>
+                            <h4>{singleProduct.description}</h4>
+                        </div>
                     </div>
                 :
                 <img className="page-not-found" src="https://www.hostpapa.com/blog/app/uploads/2019/05/image4-1.png"></img>

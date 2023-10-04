@@ -1,9 +1,0 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[501],{2287:function(e,t,s){Promise.resolve().then(s.bind(s,8943))},8943:function(e,t,s){"use strict";s.r(t);var n=s(7437),o=s(2265);s(4896),t.default=function(e){let{params:t}=e,[s,r]=(0,o.useState)(null);async function getSingleProduct(){let e="https://fakestoreapi.com/products/".concat(t.id);try{let t=await fetch(e),s=await t.json();console.log(s),r(s)}catch(e){console.log(e)}}return(0,o.useEffect)(()=>{getSingleProduct()},[]),(0,n.jsxs)("div",{className:"page",children:[(0,n.jsxs)("nav",{className:"nav-back",children:[(0,n.jsx)("button",{onClick:function(){history.back()},children:"Back"}),(0,n.jsx)("h1",{children:"Product"})]}),s?(0,n.jsxs)("div",{className:"card-user-details",children:[(0,n.jsx)("div",{className:"col-left"}),(0,n.jsx)("div",{className:"col-right"})]}):(0,n.jsx)("img",{className:"page-not-found",src:"https://www.hostpapa.com/blog/app/uploads/2019/05/image4-1.png"})]})}},4896:function(){},622:function(e,t,s){"use strict";/**
- * @license React
- * react-jsx-runtime.production.min.js
- *
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */var n=s(2265),o=Symbol.for("react.element"),r=(Symbol.for("react.fragment"),Object.prototype.hasOwnProperty),c=n.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,a={key:!0,ref:!0,__self:!0,__source:!0};function q(e,t,s){var n,l={},i=null,u=null;for(n in void 0!==s&&(i=""+s),void 0!==t.key&&(i=""+t.key),void 0!==t.ref&&(u=t.ref),t)r.call(t,n)&&!a.hasOwnProperty(n)&&(l[n]=t[n]);if(e&&e.defaultProps)for(n in t=e.defaultProps)void 0===l[n]&&(l[n]=t[n]);return{$$typeof:o,type:e,key:i,ref:u,props:l,_owner:c.current}}t.jsx=q,t.jsxs=q},7437:function(e,t,s){"use strict";e.exports=s(622)}},function(e){e.O(0,[971,864,744],function(){return e(e.s=2287)}),_N_E=e.O()}]);

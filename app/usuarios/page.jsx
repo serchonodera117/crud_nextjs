@@ -280,7 +280,7 @@ function Users(){
                     </div>
                     <br></br>
                     <div className="modal-footer">
-                        <label className="modal-cancel" htmlFor="show-modal">cancelar</label>
+                        <label className="modal-cancel" htmlFor="show-modal">Cancel</label>
                         <button className="modal-submit" type="submit">Submit</button>
                     </div>
                 </form>
