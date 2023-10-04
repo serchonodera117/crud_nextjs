@@ -13,10 +13,10 @@ function Navigation(props){
             <nav className="navbar">
                 <ul>
                     <li>
-                        <Link href="./usuarios">Usuarios</Link>
+                        <Link href="./usuarios">Users</Link>
                     </li>
                     <li>
-                        <Link href="./productos">Productos</Link>
+                        <Link href="./productos">products</Link>
                     </li>
                 </ul>
                 <a id="logout" href="/" onClick={closeSession}>
