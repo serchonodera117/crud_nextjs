@@ -2,6 +2,7 @@
     --page-color: #382a2a;
     --card-color: rgb(20, 15, 31);
     --btn-page-color: rgb(78, 50, 87);
+    --btn-delete: rgb(151, 7, 7);
 }
 
 *{
@@ -57,6 +58,22 @@
     opacity: 1;
     transform: translateX(95%);
 }
+
+.btn-delete{
+    opacity: 0;
+    display: table;
+    float: right;
+    padding: 5px 15px;
+    border-radius: 50px;
+    transition: 0.3s ease-out;
+    background-color: var(--btn-delete-color);
+
+}
+.card-user:hover .btn-delete{
+    z-index: 0;
+    opacity: 1;
+    transform: translateX(-95%);
+}
 .col-left, .col-right{
     width: 50%;
     padding: 20px 40px;
@@ -73,13 +90,65 @@
     margin-bottom: 20px;
 }
 
-@media only screen and (max-width:500px){
+.menu-options{
+    position: fixed;
+    bottom:5rem;
+    right: 5rem;
+}
+.menu-options ul{
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+
+.control, .btn-option{
+    border: 0px;
+    display: block;
+    background-color: #14071a;
+    text-align: center;
+    padding: 1rem;
+    height:70px;
+    width: 70px;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: 0.3s ease-in;
+}
+.control:hover, .btn-option:hover{
+    background-color: rgba(68, 11, 70, 0.7);
+    box-shadow: 0px 0px 7px 3px rgb(90, 109, 65)
+}
+.btn-option{
+    display: block;
+    margin-bottom: -20px;
+    opacity: 0;
+    z-index: -1;
+}
+.control{
+    z-index: 1;
+    font-size: 27px
+}
+.menu-options:has(input[type="checkbox"]:checked)  .btn-option{
+    transition: 0.3s ease-in;
+    opacity: 1;
+    margin-bottom: 10px;
+}
+.menu-options:has(input[type="checkbox"]:checked)  .control{
+    transform: rotate(135deg);
+}
+
+@media only screen and (max-width:750px){
     .col-left, .col-right{
         width: 100%;
         padding: 20px 40px;
     }
+    .col-right{
+        border-top: 1px solid white;
+    }
     .card-user{
         display: block;
         height: 500px;
+    }
+    .container{
+        width: 85vw;
     }
 }
