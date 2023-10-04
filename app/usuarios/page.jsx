@@ -104,13 +104,25 @@ function Users(){
                 body: JSON.stringify(data)
             })
             const json = await response.json()
-            data.id=json.id
+            data.id=json.id + users.length
             let temp = [...users]
                 temp.push(data)
           |     setUsers(temp)
+          document.getElementById("input-email").value =""
+          document.getElementById("input-username").value =""
+          document.getElementById('input-password').value =""
+          document.getElementById("input-name").value =""
+          document.getElementById("input-lastname").value
+          document.getElementById("input-city").value =""
+          document.getElementById("input-street").value =""
+          document.getElementById("input-number").value =""
+          document.getElementById("input-zipcode").value =""
+          document.getElementById("input-lat").value =""
+          document.getElementById("input-long").value =""
+          document.getElementById("input-phone").value =""
           setTimeout(()=>{
             loadModal()
-            data.email=""
+ 
           },500)
          }
          catch(err){

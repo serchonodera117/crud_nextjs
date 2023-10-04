@@ -139,7 +139,7 @@ function Productos(){
                                 </div>
                                 <div className="col-right">
                                     <h4>ID: {product.id}</h4>
-                                    <h3>{product.price}</h3>
+                                    <h3>Price: {product.price} $</h3>
                                     <button className="btn-update" onClick={() =>{displayModal(product)}}>Update</button>
                                     <br></br>
                                     <br></br>
