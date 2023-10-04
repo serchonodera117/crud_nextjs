@@ -9,7 +9,6 @@ import "@/components/styles/users.css"
 function Users(){
    const [isLogged,setIsLogged] = useState(true);
     const [users, setUsers] = useState([]);
-    const [usersReset, setUserReset] = useState([])
 
 
     useEffect(()=>{
@@ -24,7 +23,6 @@ function Users(){
        const response = await fetch(url)
        const json = await response.json()
             setUsers(json);
-            setUserReset(json);
     }
     catch(err){
             console.log(err)

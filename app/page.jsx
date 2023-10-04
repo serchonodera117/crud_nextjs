@@ -56,6 +56,9 @@ export default function RootLayout() {
        (!islogged)? <Login onLogin={startSession} onToast={writeToast}/> :
         <Navigation onLogout={closeSession}></Navigation>
       }
+      {
+        (islogged)?<img className="page-not-found" src="https://1.bp.blogspot.com/-CbWLumSsnHA/X3NCN8Y97SI/AAAAAAAAbdM/6_nItNbt0jcQvkFzogyKeqUGJjMyM57rACLcBGAsYHQ/w1600/v3-290920-rocket-minimalist-desktop-wallpaper-hd.png"></img>:<div></div>
+      }
     </main>
   )
 }

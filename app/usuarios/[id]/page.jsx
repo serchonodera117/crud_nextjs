@@ -31,7 +31,7 @@ function SingleUser({params}) {
         <div className="page">
             <nav className="nav-back">
                 <button onClick={goBack}>Back</button>
-                <h1>Usuario</h1>
+                <h1>User</h1>
             </nav>
 
             { (singleUser!=null)?
